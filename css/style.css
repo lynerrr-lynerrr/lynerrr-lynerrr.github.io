@@ -1,0 +1,49 @@
+body {
+        background: #ffe0ee;
+        color: #ff55aa;
+}
+
+hr {
+        color: #ff55aa;
+}
+
+.container {
+        height: 33%;
+        margin-left: 10%;
+        margin-right: 10%;
+        overflow: hidden;
+        position: relative;
+        text-align: center;
+        font-size: 30px;
+}
+
+.container2 {
+        height: 33%;
+        margin-left: 10%;
+        margin-right: 10%;
+        overflow: hidden;
+        position: relative;
+        text-align: left;
+        font-size: 30px;
+}
+
+.inner1 {
+        position: relative;
+        float: left;
+        max-width: 45%; 
+}
+.inner2 {
+        position: relative;
+        float: right;
+
+}
+table, tr, th, td {
+        border: 2px solid;
+        color: #ff55aa;
+}
+.hi {
+        margin: 10px;
+}
+a {
+        text-decoration: none;
+}
