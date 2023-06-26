@@ -1,66 +1,100 @@
 <!DOCTYPE html>
-<html lang="en">
-        <head>
-                <title>Aiganym Onerbekova</title>
-                <meta charset="UTF-8">
-                <meta name="viewport" content="width=device-width, initial-scale=1">
-                <link href="css/style.css" rel="stylesheet">
-        <body>
-                <div class="container">
-                        <p class="hi">Hi</p>
-                        <div class="inner1">
-                                <p>my name is Aiganym and I'm 60 y.o. retired man. I have decided to create a website about myself 🙂</p>
-                                <hr>
-                        </div>
-                        <div class="inner2">
-                                <img src="img/ded.jpg" alt="">
-                        </div>
-                </div>
-                <div class="container2">
-                       <p>About me</p>
-                       <ul>
-                                <li>I'm 60.</li>
-                                <li>I'm from Kazakhstan, Astana</li>
-                                <li>I've graduated from AITU, MGU, Harvard and Space University on Mars.</li>
-                                <li>I don't have a family, but at least, i have a lot of friends.</li>
-                                <li>I have 3 cats. Their names are: Cheese, Milk and Coal.</li>
-                       </ul>
-                </div>
-                <div class="container">
-                        <div class="inner1">
-                                <p>Experience</p>
-                                <ul>
-                                        <li>Psychologist. 2025-2023</li>
-                                        <li>Dead house. The rest of my life.</li>
-                                </ul>                        
-                        </div>
-                        <div class="inner2">
-                                <table>
-                                        <tr>
-                                                <td>Name</td>
-                                                <td>Height</td>
-                                                <td>Weight</td>
-                                                <td>Color</td>
-                                        </tr>
-                                        <tr>
-                                                <td><a href="https://media.discordapp.net/attachments/1059444166427418645/1094579190365425714/IMG_5164.jpg?width=809&height=656">Cheese</a></td>
-                                                <td>23 cm</td>
-                                                <td>5 kg</td>
-                                                <td>White and orange</td>
-                                        </tr>
-                                        <tr>
-                                                <td><a href="https://media.discordapp.net/attachments/1059444166427418645/1094579190617092127/IMG_5165.jpg?width=875&height=656">Milk</a></td>
-                                                <td>25 cm</td>
-                                                <td>7 kg</td>
-                                                <td>White</td>
-                                        </tr>
-                                        <tr>
-                                                <td><a href="https://media.discordapp.net/attachments/1059444166427418645/1094579190856163388/IMG_5166.webp?width=984&height=656">Coal</a></td>
-                                                <td>20 cm</td>
-                                                <td>2 kg</td>
-                                                <td>Black</td>
-                                        </tr>
-                                </table>
-                        </div>
-        </body>                
+<html>
+<head>
+  <title>Password Generator</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" type="image/x-icon" href="/img/favicon.ico">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <div class="container-fluid">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#home">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#home" data-bs-toggle="modal" data-bs-target="#premiumModal" onclick="checkPremium()">Premium</a>
+          </li>
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="about.html">About us</a>
+        </li>
+      </ul>
+      
+    </div>
+  </div>
+</nav>
+
+<div class="modal fade" id="premiumModal" tabindex="-1" aria-labelledby="premiumModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="premiumModalLabel">Premium</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <p id="premiumtext1">Even though we provide free service, we still have expenses, and so we limit password generations for users.</p>
+        <p id="premiumtext2">But, if you would wish to support us, you can buy a premium account for 4.99$, and you will have unlimited generations.</p>
+        <p id="premiumtext3">If you have transfered the money to us, click the "Get Premium" button below.</p>
+        <p id="premiumtext4">Thank you!</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary" id="premiumbutton" onclick="setPremium()">Get Premium</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="container text-center border border-dark position-absolute top-50 start-50 translate-middle">
+  
+  
+  <div class="row">
+    <div class="col text-center mt-3">
+      <h3 id="premium"></h3>
+      <h1>Password Generator</h1>
+      <p>Passwords:</p>
+      <p class="text-center border border-dark" id="passwords">Your passwords will go here...</p>
+    </div>
+  </div>
+
+    <div class="row">
+      <div class="col mt-4 text-center">
+        <p>Amount of passwords:</p>
+        <input type="number" id="amount" value="1">
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col mt-4 text-center">
+        <p>Choose difficulty:</p>
+        <div id="difficultySelector">
+          <button class="btn btn-success" onclick="changeDifficulty('Easy')">Easy</button>
+          <button class="btn btn-success" onclick="changeDifficulty('Medium')">Medium</button>
+          <button class="btn btn-success" onclick="changeDifficulty('Hard')">Hard</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col mt-4">
+      </div>
+    </div>
+    
+</div>
+
+
+<script src="script.js"></script>
+</body>
 </html>
